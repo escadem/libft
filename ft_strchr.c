@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 14:34:54 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/09/29 11:57:36 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/09/30 18:52:04 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,18 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-/*
-int main(void)
-{
-	char *c;
-	char *pc;
-	int i = 0;
+// int main(void)
+// {
+// 	char *c;
+// 	char *pc;
+// 	int i = 0;
 
-	c = "La casa de la abuela";
-	pc = ft_strchr(c, 'b');
-	while (pc[i])
-	{
-		printf("%c", pc[i]);
-		i ++;
-	}
-	printf("\n");
-}
-*/
+// 	c = "La casa de la abuela";
+// 	pc = ft_strchr(c, 'b');
+// 	while (pc[i])
+// 	{
+// 		printf("%c", pc[i]);
+// 		i ++;
+// 	}
+// 	printf("\n");
+// }
