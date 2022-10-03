@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 22:59:16 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/09/30 21:07:33 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/10/02 12:53:03 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ void	*ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 
-	if(!s)
-		return(NULL);
+	if (!s)
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{
-		*(unsigned char *) (s + i) = (unsigned char) 0;
+		*(unsigned char *)(s + i) = (unsigned char) 0;
 		i ++;
 	}
-	return(s);
+	return (s);
 }
 
 // int main(void)
@@ -37,7 +37,7 @@ void	*ft_bzero(void *s, size_t n)
 // 	int i;
 // 	int n;
 // 	int array[5] = {12, 45, 75, 98, 01};
-	
+
 // 	i = 0;
 // 	printf("[");
 // 	while (i < 5)
@@ -46,12 +46,9 @@ void	*ft_bzero(void *s, size_t n)
 // 		i ++;
 // 	}
 // 	printf("]\n");
-
 // 	i = 0;
 // 	n = 8;
-
 // 	ft_bzero(&array[0], n);
-	
 // 	printf("[");
 // 	while (i < 5)
 // 	{

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/02 12:54:37 by eescat-l          #+#    #+#             */
+/*   Updated: 2022/10/02 12:55:35 by eescat-l         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 /*
@@ -14,14 +26,14 @@ size_t	ft_strlen(const char *s)
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	size_t 	i;
+	size_t	i;
 
-	if(!dst)
+	if (!dst)
 		return (NULL);
 	i = 0;
 	while (*(char *)(src + i) != '\0' && i < n)
 	{
-		*(char *) (dst + i) = *(char *) (src + i);
+		*(char *)(dst + i) = *(char *)(src + i);
 		i ++;
 	}
 	return (dst);
