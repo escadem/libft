@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 14:31:08 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/09/24 14:33:14 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/10/03 07:43:12 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,8 @@ int	ft_tolower(int c)
 	return (c);
 }
 
-/*
-int main(void)
-{
-	char c = 'J';
-	printf("%c --> %c\n", c, ft_tolower(c));
-}
-*/
+// int main(void)
+// {
+// 	char c = 'J';
+// 	printf("%c --> %c\n", c, ft_tolower(c));
+// }

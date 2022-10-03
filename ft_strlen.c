@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 22:02:54 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/09/29 11:58:50 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/10/03 07:42:08 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,11 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-/*
-int main(void)
-{
-	char *cadena;
-	cadena = "Prueba";
+// int main(void)
+// {
+// 	char *cadena;
+// 	cadena = "Prueba";
 
-	printf("La longitud de la cadena es %d\n", ft_strlen(cadena));
-	return (0);
-}
-*/
+// 	printf("La longitud de la cadena es %d\n", ft_strlen(cadena));
+// 	return (0);
+// }
