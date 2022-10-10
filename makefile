@@ -6,7 +6,7 @@
 #    By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 17:11:56 by eescat-l          #+#    #+#              #
-#    Updated: 2022/10/02 19:53:10 by eescat-l         ###   ########.fr        #
+#    Updated: 2022/10/10 16:18:25 by eescat-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS	= ft_isalpha.c \
 	ft_strlen.c \
 	ft_memset.c \
 	ft_bzero.c \
-	ft_memcpy.c \
+	# ft_memcpy.c \
 	ft_memmove.c \
 	ft_strlcpy.c \
 	ft_strlcat.c \
@@ -27,23 +27,23 @@ SRCS	= ft_isalpha.c \
 	ft_strchr.c \
 	ft_strrchr.c \
 	ft_strncmp.c \
-	ft.memchr.c \
+	ft_memchr.c \
 	ft_memcmp.c \
 	ft_strnstr.c \
 	ft_atoi.c \
 	ft_calloc.c \
 	ft_strdup.c \
-	ft_substr.c \
-	ft_strjoin.c \
-	ft_strtrim.c \
-	ft_split.c \
-	ft_itoa.c \
-	ft_strmapi.c \
-	ft_striteri.c \
-	ft_putchar_fd.c \
-	ft_putstr_fd.c \
-	ft_putendl_fd.c \
-	ft_putnbr_fd.c
+	# ft_substr.c \
+	# ft_strjoin.c \
+	# ft_strtrim.c \
+	# ft_split.c \
+	# ft_itoa.c \
+	# ft_strmapi.c \
+	# ft_striteri.c \
+	# ft_putchar_fd.c \
+	# ft_putstr_fd.c \
+	# ft_putendl_fd.c \
+	# ft_putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -66,10 +66,11 @@ CC			= gcc
 
 RM			= rm -f
 
-CFLAGS		= -Wall -Werror -Wextra -I
+# CFLAGS		= -Wall -Werror -Wextra -I
+CFLAGS		= -Wall -Werror -Wextra
 
 .c.o:       
-            ${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
 			ar rc ${NAME} ${OBJS}
