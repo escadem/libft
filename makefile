@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 17:11:56 by eescat-l          #+#    #+#              #
-#    Updated: 2022/10/10 16:18:25 by eescat-l         ###   ########.fr        #
+#    Updated: 2022/10/11 15:49:41 by eescat-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS	= ft_isalpha.c \
 	ft_strlen.c \
 	ft_memset.c \
 	ft_bzero.c \
-	# ft_memcpy.c \
+	ft_memcpy.c \
 	ft_memmove.c \
 	ft_strlcpy.c \
 	ft_strlcat.c \
@@ -33,9 +33,9 @@ SRCS	= ft_isalpha.c \
 	ft_atoi.c \
 	ft_calloc.c \
 	ft_strdup.c \
-	# ft_substr.c \
-	# ft_strjoin.c \
-	# ft_strtrim.c \
+	ft_substr.c \
+	ft_strjoin.c \
+	ft_strtrim.c \
 	# ft_split.c \
 	# ft_itoa.c \
 	# ft_strmapi.c \

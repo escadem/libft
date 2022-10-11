@@ -6,21 +6,11 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:02:20 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/04 19:49:18 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/10/11 18:44:04 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// size_t	ft_strlen(const char *s)
-// {
-// 	size_t	i;
-
-// 	i = 0;
-// 	while (s[i])
-// 		i ++;
-// 	return (i);
-// }
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -31,6 +21,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	i = 0;
+	if (dstsize == 0)
+		return (src_len);
+	if (dstsize < dst_len + 1)
+		return (dstsize + src_len);
 	while (i < dstsize - dst_len - 1 && src[i])
 	{
 		if (src[i] != '\0')
@@ -42,13 +36,22 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 }
 
 // #include <string.h>
+// size_t	ft_strlen(const char *s)
+// {
+// 	size_t	i;
+
+// 	i = 0;
+// 	while (s[i]) 
+// 		i ++;
+// 	return (i);
+// }
 // int main(void)
 // {
-// 	char dst1[30] = "casa";
-// 	char str1[] = "SourceSour";
-// 	char dst2[30] = "casa";
-// 	char str2[] = "SourceSour";
-// 	int dstsize = 25;
+// 	char dst1[30] = "01234567890123456789";
+// 	char str1[] = "ABCDEFGH";
+// 	char dst2[30] = "01234567890123456789";
+// 	char str2[] = "ABCDEFGH";
+// 	int dstsize = 23;
 // 	int res1 = 0; 
 // 	int res2 = 0;
 // 	printf("dst_len: %zu\n", ft_strlen(dst1));
