@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 10:17:40 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/09 19:11:57 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/10/16 13:06:48 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (!needle)
+	if (*needle == 0)
 		return ((char *)haystack);
-	while (i < len - ft_strlen(needle))
+	if (!haystack || *haystack == 0)
+		return (NULL);
+	while (len != 0 && i < len)
 	{
 		j = 0;
 		while (needle[j] != '\0')
@@ -40,7 +42,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			else
 				break ;
 		}
-		if (j == ft_strlen(needle))
+		if (j == ft_strlen(needle) && (i + j <= len))
 			return ((char *)(haystack + i));
 		i ++;
 	}
@@ -51,10 +53,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // int main(void)
 // {
 // 	char dst1[30] = "bla ble bli";
-// 	char str1[] = "ble";
+// 	char str1[] = "bla";
 // 	char dst2[30] = "bla ble bli";
-// 	char str2[] = "ble";
-// 	int dstsize = 12;
+// 	char str2[] = "bla";
+// 	int dstsize = 2;
 // 	char *res1 = strnstr(dst1, str1, dstsize); 
 // 	char *res2 = ft_strnstr(dst1, str1, dstsize); 
 // 	printf("%s , %s , %d\n", dst1, str1, dstsize);

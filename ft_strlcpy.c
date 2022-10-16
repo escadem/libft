@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 08:22:21 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/04 18:47:12 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/10/16 09:43:23 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		return (0);
 	while (src[counter])
 		counter ++;
+	if (dstsize == 0)
+		return (counter);
 	while (i < counter && i < dstsize - 1)
 	{
 		if (src[i] != '\0')
@@ -40,7 +42,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // 	char str1[] = "SourceSour";
 // 	char dst2[30] = "casa";
 // 	char str2[] = "SourceSour";
-// 	int dstsize = 8;
+// 	int dstsize = 2;
 // 	int res1 = 0; 
 // 	int res2 = 0;
 // 	printf("dst1: %s\n", dst1);

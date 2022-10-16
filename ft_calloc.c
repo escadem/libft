@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 18:25:16 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/10 18:25:34 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/10/16 18:41:52 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*p;
 
+	if (!count || !size)
+		return (NULL);
+	if (count > SIZE_MAX / size)
+		return (NULL);
 	p = (void *)malloc(count * size);
 	if (p == NULL )
 		return (NULL);

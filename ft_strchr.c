@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 14:34:54 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/09/30 18:52:04 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/10/15 19:09:20 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,21 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	char			*str;
+	unsigned char	chr;
 
-	i = 0;
+	chr = (unsigned char) c;
+	str = (char *) s;
 	if (!s)
 		return (NULL);
-	while (s[i])
+	while (*str != '\0')
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i++;
+		if (*str == chr)
+			return (str);
+		str++;
 	}
+	if (chr == '\0')
+		return (str);
 	return (NULL);
 }
 
@@ -32,14 +36,11 @@ char	*ft_strchr(const char *s, int c)
 // {
 // 	char *c;
 // 	char *pc;
-// 	int i = 0;
 
 // 	c = "La casa de la abuela";
-// 	pc = ft_strchr(c, 'b');
-// 	while (pc[i])
-// 	{
-// 		printf("%c", pc[i]);
-// 		i ++;
-// 	}
-// 	printf("\n");
+// 	pc = ft_strchr(c, 'l');
+// 	if (!pc)
+// 		printf("No se han encontrado coincidencias\n");
+// 	else
+// 		printf("%s", pc);
 // }

@@ -6,13 +6,12 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 19:30:41 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/03 07:43:12 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/10/15 20:01:30 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;
@@ -22,36 +21,38 @@ size_t	ft_strlen(const char *s)
 		i ++;
 	return (i);
 }
-*/
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	char			*str;
+	char			*p_chr;
+	unsigned char	chr;
 
-	i = ft_strlen(s);
+	chr = (unsigned char) c;
+	str = (char *) s;
+	p_chr = NULL;
 	if (!s)
-		return (NULL);
-	while (i)
+		return (p_chr);
+	while (*str)
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i --;
+		if (*str == chr)
+			p_chr = str;
+		str++;
 	}
-	return (NULL);
+	if (chr == '\0')
+		p_chr = (char *)(s + ft_strlen(s));
+	return (p_chr);
 }
 
 // int main(void)
 // {
 // 	char *c;
 // 	char *pc;
-// 	int i = 0;
 
 // 	c = "La casa de la abuela";
-// 	pc = ft_strrchr(c, 'd');
-// 	while (pc[i])
-// 	{
-// 		printf("%c", pc[i]);
-// 		i ++;
-// 	}
-// 	printf("\n");
+// 	pc = ft_strrchr(c, 'l');
+// 	if (!pc)
+// 		printf("No se han encontrado coincidencias\n");
+// 	else
+// 		printf("%s\n", pc);
 // }
