@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 13:44:40 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/02 20:05:10 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:19:49 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
 
-	if (!b)
-		return (NULL);
+	// if (!b)
+	// 	return (NULL);
 	i = 0;
 	while (i < len)
 	{
@@ -47,8 +47,8 @@ void	*ft_memset(void *b, int c, size_t len)
 // 	}
 // 	printf("]\n");
 // 	i = 0;
-// 	n = 4;
-// 	ft_memset(array, 'x', n);
+// 	n = 0;
+// 	ft_memset(NULL, 'x', n);
 // 	printf("[");
 // 	while (i < 5)
 // 	{

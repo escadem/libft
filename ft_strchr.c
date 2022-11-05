@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 14:34:54 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/15 19:09:20 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/02 20:30:25 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strchr(const char *s, int c)
 
 	chr = (unsigned char) c;
 	str = (char *) s;
-	if (!s)
-		return (NULL);
+	// if (!s)
+	// 	return (NULL);
 	while (*str != '\0')
 	{
 		if (*str == chr)

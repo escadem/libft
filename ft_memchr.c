@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 07:29:48 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/15 17:53:55 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:25:06 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char	*ft_memchr(const void *str, int ch, size_t n )
 {
 	size_t	i;
 
-	if (!str)
-		return (NULL);
+	// if (!str)
+	// 	return (NULL);
 	i = 0;
 	while (i < n)
 	{

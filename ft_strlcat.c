@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:02:20 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/11 18:44:04 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/02 21:01:50 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 	size_t	dst_len;
 
+	if ((!dst || !src) && !dstsize)
+		return (0);
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	i = 0;

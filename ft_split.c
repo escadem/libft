@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 12:57:59 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/30 17:15:27 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/05 00:19:29 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,146 +22,178 @@
 // 	return (i);
 // }
 
-// void	*ft_calloc(size_t count, size_t size)
-// {
-// 	void	*p;
-
-// 	if (!count || !size)
-// 		return (NULL);
-// 	if (count > SIZE_MAX / size)
-// 		return (NULL);
-// 	p = (void *)malloc(count * size);
-// 	if (p == NULL )
-// 		return (NULL);
-// 	return (ft_bzero(p, count * size));
-// }
-
-// void	*ft_bzero(void *s, size_t n)
+// size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // {
 // 	size_t	i;
+// 	size_t	counter;
+
+// 	counter = 0;
+// 	i = 0;
+// 	// if (!dst || !src)
+// 	// 	return (0);
+// 	while (src[counter])
+// 		counter ++;
+// 	if (dstsize == 0)
+// 		return (counter);
+// 	while (i < counter && i < dstsize - 1)
+// 	{
+// 		if (src[i] != '\0')
+// 			dst[i] = src[i];
+// 		i ++;
+// 	}
+// 	dst[i] = '\0';
+// 	return (counter);
+// }
+
+// char	*ft_substr(char const *s, unsigned int start, size_t len)
+// {
+// 	char	*substr;
 
 // 	if (!s)
 // 		return (NULL);
-// 	i = 0;
-// 	while (i < n)
+// 	if (start > ft_strlen(s))
 // 	{
-// 		*(unsigned char *)(s + i) = (unsigned char) 0;
-// 		i ++;
+// 		substr = (char *) malloc(1 * sizeof(char));
+// 		if (substr == NULL)
+// 			return (NULL);
+// 		*substr = '\0';
+// 		return (substr);
 // 	}
-// 	return (s);
+// 	if (ft_strlen(s + start) < len)
+// 		len = ft_strlen(s + start);
+// 	substr = (char *)malloc((len + 1) * sizeof(char));
+// 	if (substr == NULL )
+// 		return (NULL);
+// 	ft_strlcpy(substr, s + start, len + 1);
+// 	return (substr);
 // }
 
-static size_t	ft_count_rows(char const *s, char c)
+size_t	ft_count_rows(char const *s, char c)
 {
-	int	rows;
-	int	index;
+	size_t	rows;
+	int		i;
+	int		index;
 
-	index = 0;
 	rows = 0;
-	while (*s)
+	i = 0;
+	index = 0;
+	while (s[i])
 	{
-		if (*s != c && index == 0)
+		if (s[i] != c && index == 0)
 		{
 			index = 1;
-			rows ++;
+			rows++;
 		}
-		else if (*s == c)
+		if (s[i] == c)
 			index = 0;
-		s++;
+		i++;
 	}
-	return (rows + 1);
+	return (rows);
 }
 
-static void	ft_count_rowlen(char const *s, char c, size_t *vect)
+char	*ft_free(char **matrix, size_t rows)
 {
-	int		i;
-	int		j;
-	size_t	length;
+	size_t	i;
+
+	i = 0;
+	while (i < rows)
+	{
+		free(matrix[rows]);
+		i++;
+	}
+	free(matrix);
+	return (NULL);
+}
+
+// void	ft_create_matrix(char **matrix, char const *s, char c)
+// {
+// 	size_t	i;
+// 	size_t	j;
+// 	size_t	len;
+
+// 	i = 0;
+// 	j = 0;
+// 	len = 0;
+// 	while (s[i])
+// 	{
+// 		if (s[i] != c)
+// 				len++;
+// // printf("len = %zu\n", len);
+// 		if (s[i] == c)
+// 		{
+// 			if (len)
+// 			{
+// // printf("\tj = %zu\n",j);
+// 				matrix[j] = (char *)malloc ((len+1) * sizeof(char));
+// 				j++;
+// 				len=0;
+// 			}
+// 		}
+// 		i++;
+// 	}
+// 	printf("i = %zu, j = %zu, len = %zu\n", i, j, len);
+// }
+
+void	ft_fill_matrix(char **matrix, char const *s, char c)
+{
+	size_t	i;
+	size_t	j;
+	size_t	len;
 
 	i = 0;
 	j = 0;
-	while (s[i + j])
+	len = 0;
+	while (s[i])
 	{
-		length = 0;
-		while (s[i + j] != c)
+		if (s[i] != c)
+			len++;
+// printf("len = %zu\n", len);
+// printf("s[i] = %c\n", s[i]);
+// printf("s[i+1] = %c\n", s[i+1]);
+		if (s[i] == c && len)
 		{
-			length ++;
+			matrix[j] = ft_substr(s, i - len, len);
+// printf("matrix[%zu] = %s\n", j, matrix[j]);
 			j++;
+			len = 0;
 		}
-		if (length != 0)
-		{
-			vect[i] = length + 1;
-			i++;
-		}
-		else if (length == 0)
-			j++;
+		i++;
 	}
-	vect[i] = 0;
-}
-
-static char	**ft_split_exe(size_t *vect, char **str, char const *s, char c)
-{
-	size_t	row;
-	size_t	s_counter;
-	size_t	i;
-
-	row = 0;
-	s_counter = 0;
-	i = 0;
-	while (vect[row])
-	{
-		str[row] = ft_calloc((vect[row] + 1), sizeof(char));
-		s_counter = 0;
-		while (s_counter < vect[row] - 1)
-		{
-			if (*(s + i) != c)
-			{
-//printf("\trow = %zu\t\ts + %zu = %c\n",row, i, *(s + i));
-				str[row][s_counter] = *(s + i);
-				s_counter++;
-			}
-			i++;
-		}
-		row++;
-	}
-	str[row] = ft_calloc(1, sizeof(char));
-	return (str);
+	if (!s[i] && len)
+		matrix[j] = ft_substr(s, i - len, len);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	*vect;
-	char	**str;
-	size_t	i;
+	char	**matrix;
+	size_t	rows;
 
-	if (*s == 0)
+	if (!s)
 		return (NULL);
-	i = ft_count_rows(s, c);
-	vect = ft_calloc(i, sizeof(size_t));
-	ft_count_rowlen(s, c, vect);
-// printf("i = %zu\n", i);
-// for (int j=0; j< (int)i; j++)
-// printf("vect[%d] = %zu \n",j, vect[j]);
-	str = ft_calloc((i + 1), sizeof(char *));
-// printf("calloc str OK\n");	
-	str = ft_split_exe(vect, str, s, c);
-// printf("ft_split_exe OK\n");	
-	free (vect);
-	return (str);
+	rows = ft_count_rows(s, c);
+// printf("rows = %zu\n", rows);
+	matrix = (char **)malloc((rows + 1) * sizeof(char *));
+	if (!matrix)
+		return (NULL);
+	ft_fill_matrix(matrix, s, c);
+	matrix[rows] = NULL;
+	return (matrix);
 }
 
 // int main(void)
 // {
 // 	char *s1 = "1A2B3C4A5E6G7D8F9HHH0A";
+// 	// char *s1 = "ABCD";
 // 	char c = 'A';
 // 	int i = 0;
 // 	char **s3;
 
 // 	s3 = ft_split(s1, c);
-// printf("ft_split OK\n");
-// 	while (**(s3 + i))
+// // printf("ft_split OK\n");
+// // printf("s[0 = %s\n", *(s3));
+// 	while (s3[i])
 // 	{
-// 		printf ("i = %d, \nrow %d: %s\n", i, i, *(s3 + i));
+// 		printf ("i = %d, row = %d, s= %s\n", i, i, s3[i]);
 // 		i++;
 // 	}
 // 	return (0);

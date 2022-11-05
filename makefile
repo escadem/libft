@@ -6,7 +6,7 @@
 #    By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 17:11:56 by eescat-l          #+#    #+#              #
-#    Updated: 2022/10/16 18:56:04 by eescat-l         ###   ########.fr        #
+#    Updated: 2022/11/05 00:47:16 by eescat-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,14 +36,14 @@ SRCS	= ft_isalpha.c \
 	ft_substr.c \
 	ft_strjoin.c \
 	ft_strtrim.c \
-	# ft_split.c \
-	# ft_itoa.c \
-	# ft_strmapi.c \
-	# ft_striteri.c \
-	# ft_putchar_fd.c \
-	# ft_putstr_fd.c \
-	# ft_putendl_fd.c \
-	# ft_putnbr_fd.c
+	ft_split.c \
+	ft_itoa.c \
+	ft_strmapi.c \
+	ft_striteri.c \
+	ft_putchar_fd.c \
+	ft_putstr_fd.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -52,10 +52,10 @@ BONUS = ft_lstnew.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
 	ft_lstadd_back.c \
-	ft_lstdelone.c \
-	ft_lstclear.c \
-	ft_lstiter.c \
-	ft_lstmap.c
+	# ft_lstdelone.c \
+	# ft_lstclear.c \
+	# ft_lstiter.c \
+	# ft_lstmap.c
 
 BONUS_OBJS = $(BONUS:.c=.o)
 
@@ -78,15 +78,15 @@ ${NAME}:	${OBJS}
 all:		${NAME}
 
 clean:
-			${RM} ${OBJS}
+			${RM} ${OBJS} ${BONUS_OBJS}
 
 fclean:		clean
 			${RM} ${NAME}
 
 re:			fclean all
 
-bonus:		${OBJS}
-			ar rc ${NAME} ${OBJS} ${BONUS_OBJS}
+bonus:		all ${BONUS_OBJS}
+			ar rc ${NAME} ${BONUS_OBJS}
 
 
 .PHONY:		all clean fclean re bonus

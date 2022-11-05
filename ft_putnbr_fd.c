@@ -1,43 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 18:23:51 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/11/02 20:54:26 by eescat-l         ###   ########.fr       */
+/*   Created: 2022/11/01 17:18:55 by eescat-l          #+#    #+#             */
+/*   Updated: 2022/11/03 20:10:12 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*s2;
-	int		i;
-	int		len;
-
-	i = 0;
-	len = 0;
-	while (*(s1 + len))
-		len ++;
-	s2 = (char *)malloc((len + 1) * sizeof(char));
-	if (s2 == NULL)
-		return (NULL);
-	while (i < len)
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else if (n < 0)
 	{
-		s2[i] = s1[i];
-		i ++;
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(n * (-1), fd);
 	}
-	s2[i] = '\0';
-	return (s2);
+	else if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(n + '0', fd);
 }
+
+// void test(int n)
+// {
+// 	ft_putnbr_fd(n, 1);
+// 	puts("");
+// }
 
 // int main(void)
 // {
-// 	char s1[] = "origen";
-// 	char *s2;
-// 	s2 = ft_strdup(s1);
-// 	printf("s2: %s\n", s2);
+// 	test(-15685);
+// 	test(+12457);
+// 	test(0);
+// 	test(-2147483648);
+// 	test(2147483647);
 // }

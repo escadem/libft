@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 09:58:59 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/10 15:09:47 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/02 20:31:25 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
-	if (!s1 || !s2)
-		return (0);
+	// if (!s1 || !s2)
+	// 	return (0);
 	i = 0;
 	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
 	{

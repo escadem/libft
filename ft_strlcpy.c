@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 08:22:21 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/16 09:43:23 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/02 20:31:42 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	counter = 0;
 	i = 0;
-	if (!dst || !src)
-		return (0);
+	// if (!dst || !src)
+	// 	return (0);
 	while (src[counter])
 		counter ++;
 	if (dstsize == 0)
