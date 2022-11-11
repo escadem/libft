@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 18:58:39 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/11/03 19:43:36 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/06 12:40:36 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,13 @@ static unsigned int	ft_itoa_lenght(int n)
 {
 	unsigned int		length;
 	unsigned int		nr;
-	int					sign;
+	// int					sign;
 
-	sign = 0;
+	// sign = 0;
 	length = 0;
 	if (n < 0)
 	{
-		sign = 1;
+		// sign = 1;
 		length += 1;
 		nr = n * (-1);
 	}

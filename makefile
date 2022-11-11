@@ -6,7 +6,7 @@
 #    By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 17:11:56 by eescat-l          #+#    #+#              #
-#    Updated: 2022/11/05 00:47:16 by eescat-l         ###   ########.fr        #
+#    Updated: 2022/11/11 19:38:57 by eescat-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,10 +52,10 @@ BONUS = ft_lstnew.c \
 	ft_lstsize.c \
 	ft_lstlast.c \
 	ft_lstadd_back.c \
-	# ft_lstdelone.c \
-	# ft_lstclear.c \
-	# ft_lstiter.c \
-	# ft_lstmap.c
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstmap.c
 
 BONUS_OBJS = $(BONUS:.c=.o)
 
