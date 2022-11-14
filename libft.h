@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 13:42:07 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/11/11 19:39:47 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/14 18:02:45 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
-// # include <string.h>
-// # include <stdint.h>
+# include <string.h>
+# include <stdint.h>
 
 //
 //Part 1
