@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:01:17 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/11/03 19:32:57 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/14 18:30:29 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (NULL);
 }
-
-// int main(void)
-// {
-// 	char *s1 = "AB1C23A456BBB";
-// 	char *s2 = "ABC";
-// 	char *s3;
-// 	s3 = ft_strtrim(s1, s2);
-// 	printf("s3: %s\n", s3);
-// }

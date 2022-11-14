@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 13:44:40 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/11/02 19:19:49 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/14 18:27:19 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
 
-	// if (!b)
-	// 	return (NULL);
 	i = 0;
 	while (i < len)
 	{
@@ -26,34 +24,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
-// int main(void)
-// {
-// 	char str[] = "Hola que tal";
-// 	printf("cadena: %s\n", str);
-// 	ft_memset(str, 'x', 5);
-// 	printf("cadena: %s\n", str);
-
-// 	int i;
-// 	int n;
-// 	int array[5] = {12, 45, 75, 98, 01};
-
-// 	i = 0;
-// 	printf("[");
-// 	while (i < 5)
-// 	{
-// 		printf("%i ", array[i]);
-// 		i ++;
-// 	}
-// 	printf("]\n");
-// 	i = 0;
-// 	n = 0;
-// 	ft_memset(NULL, 'x', n);
-// 	printf("[");
-// 	while (i < 5)
-// 	{
-// 		printf("%i ", array[i]);
-// 		i ++;
-// 	}
-// 	printf("]\n");
-// }

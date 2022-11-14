@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 22:39:51 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/16 13:11:18 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/14 18:24:04 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * value);
 }
-
-// int main(void)
-// {
-//     char str[] = "  -2147483648";
-//     char str1[] = "  -0";
-//     char str2[] = "  +-00235";
-//     printf("value = %d\n", ft_atoi(str));
-//     printf("value = %d\n", ft_atoi(str1));
-//     printf("value = %d\n", ft_atoi(str2));
-//     return (0);
-// }

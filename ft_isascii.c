@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 22:02:45 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/03 07:40:35 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/14 18:25:14 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-
-// int main(void)
-// {
-//     int r = ft_isascii('\n');
-//     printf("El valor de la consulta es %d\n", r);
-// 	return (0);
-// }

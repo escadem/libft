@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 21:15:39 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/03 07:38:38 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/11/14 18:25:08 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-// int main(void)
-// {
-//     int r = ft_isalpha('a');
-//     printf("El valor de la consulta es %d\n", r);
-// }
