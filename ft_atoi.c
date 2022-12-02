@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 22:39:51 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/10/16 13:11:18 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/12/02 20:21:15 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,20 @@ int	ft_atoi(const char *str)
 	return (sign * value);
 }
 
+// #include <stdlib.h>
 // int main(void)
 // {
 //     char str[] = "  -2147483648";
 //     char str1[] = "  -0";
-//     char str2[] = "  +-00235";
+//     char str2[] = "  +00235";
+// 	char str3[] = "  -1236554852200235";
 //     printf("value = %d\n", ft_atoi(str));
+//     printf("value atoi = %d\n", atoi(str));
 //     printf("value = %d\n", ft_atoi(str1));
+//     printf("value atoi = %d\n", atoi(str1));
 //     printf("value = %d\n", ft_atoi(str2));
+//     printf("value atoi = %d\n", atoi(str2));
+//     printf("value = %d\n", ft_atoi(str3));
+//     printf("value atoi = %d\n", atoi(str3));
 //     return (0);
 // }
