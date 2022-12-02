@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 22:39:51 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/12/02 20:23:28 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/12/02 20:30:37 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		value = (value * 10) + ((int) str[i] - 48);
+		value = (value * 10) + ((int)(str[i] - 48));
 		i ++;
 	}
 	return (sign * value);
