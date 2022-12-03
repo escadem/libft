@@ -6,7 +6,7 @@
 /*   By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 12:57:59 by eescat-l          #+#    #+#             */
-/*   Updated: 2022/11/14 18:28:03 by eescat-l         ###   ########.fr       */
+/*   Updated: 2022/12/03 09:58:16 by eescat-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,6 @@ size_t	ft_count_rows(char const *s, char c)
 		i++;
 	}
 	return (rows);
-}
-
-char	*ft_free(char **matrix, size_t rows)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < rows)
-	{
-		free(matrix[rows]);
-		i++;
-	}
-	free(matrix);
-	return (NULL);
 }
 
 void	ft_fill_matrix(char **matrix, char const *s, char c)
