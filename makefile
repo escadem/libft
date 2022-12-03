@@ -6,7 +6,7 @@
 #    By: eescat-l <eescat-l@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 17:11:56 by eescat-l          #+#    #+#              #
-#    Updated: 2022/11/14 19:06:00 by eescat-l         ###   ########.fr        #
+#    Updated: 2022/12/03 12:32:32 by eescat-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,6 @@ CC			= gcc
 
 RM			= rm -f
 
-# CFLAGS		= -Wall -Werror -Wextra -I
 CFLAGS		= -Wall -Werror -Wextra
 
 .c.o:       
